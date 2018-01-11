@@ -1,0 +1,137 @@
+@import "bourbon/bourbon"
+@import url('https://fonts.googleapis.com/css?family=Pacifico')
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah')
+@import url('https://fonts.googleapis.com/css?family=Poiret+One')
+
+// Colors from: http://clrs.cc/ via @mrmrs_
+$olive: #3D9970
+$lime:  #01FF70
+
+$orange:  #FF851B
+$red:     #FF4136
+$fuchsia: #F012BE
+$maroon:  #85144B
+
+$white:  #fff
+$silver: #ddd
+$gray:   #aaa
+$black:  #111
+
+// Colours from: https://color.adobe.com/explore/?filter=most-popular&time=month
+// Naming colours: http://chir.ag/projects/name-that-color/#6195ED
+$Tamarind: #2E112D
+$Blackberry: #540032
+$Siren: #820333
+$BrickRed: #C9283E
+$Flamingo: #F0433A
+$SurfieGreen: #0B877D
+$MountainMeadow: #18C29C
+$PictonBlue: #3DAAED
+$ScarletGum: #36175E
+
+body
+  padding: 50px  
+  text-align: center
+  font-family: 'Poiret One', cursive
+
+h2
+  font-family: 'Pacifico'
+  font: 
+    /* weight: 800 */
+    size: 50px
+  color: $Blackberry
+  margin-bottom: 100px
+
+p
+  font-family: 'Gloria Hallelujah', cursive
+
+hr
+  height: 0
+  background: none
+  border: 0
+  border-top: 2px solid rgba(0,0,0,0.1)
+  width: 40%
+
+// General Button
+a
+  display: inline-block
+  margin: 50px 0
+  text-decoration: none
+  font-size: 18px
+  color: white
+  padding: 1em 2em
+  letter-spacing: .1em
+  border-radius: 3px
+  background: $Blackberry
+
+//Overrode the General Button default colour
+.general
+  background: $maroon
+
+// Buttons with box-shadow styling and animations
+
+// Rounded-Outside Border
+.one:hover
+  box-shadow: 0px 0px 0px 2px white, 0px 0px 0px 4px $Blackberry
+
+// Rounded-inside Border
+.two
+  background: $PictonBlue
+  &:hover
+    box-shadow: 0px 0px 0px 1px $PictonBlue inset, 0px 0px 0px 2px white inset
+
+// Pop-Out Button
+.three
+  background: $SurfieGreen
+  position: relative
+  top: 0px
+  left: 0px
+
+  &:hover
+    box-shadow: 2px 2px 0px white, 4px 4px 0px $SurfieGreen
+    top: -4px
+    left: -4px
+
+// Push-in Button
+.four
+  background: $MountainMeadow
+  border-radius: 0
+  box-shadow: 5px 5px 0px lighten($MountainMeadow, 30%)
+  +position(relative, 0px 0 0 0px)
+  
+  &:hover
+    background: darken($MountainMeadow, 3%)
+  
+  &:active
+    top: 5px
+    left: 5px
+    box-shadow: 0px 0px 0px lighten($MountainMeadow, 30%)
+
+// Transition Top-Bar Join Complete
+.five
+  background: $fuchsia
+  position: relative
+  border-radius: 0
+    
+  &:after, &:before
+    content: ''
+    display: block
+    height: 2px
+    background: white
+    +position(absolute, 0 1% 1% 1%)
+    -webkit-transition: all 0.15s ease-out 0s
+    -moz-transition: all 0.15s ease-out 0s
+    transition: all 0.15s ease-out 0s
+  
+  &:before
+    bottom: auto
+    top: 1%
+    
+  &:hover:after, &:hover:before
+    left: 50%
+    right: 50%
+
+//Button Gradient Colour Effect.
+.six
+  background: $ScarletGum
+  box-shadow: 1px 1px 0px lighten($ScarletGum, 10%), 2px 2px 0px lighten($ScarletGum, 10%), 3px 3px 0px lighten($ScarletGum, 10%), 4px 4px 0px lighten($ScarletGum, 20%), 5px 5px 0px lighten($ScarletGum, 30%), 6px 6px 0px lighten($ScarletGum, 40%), 7px 7px 0px lighten($ScarletGum, 50%)

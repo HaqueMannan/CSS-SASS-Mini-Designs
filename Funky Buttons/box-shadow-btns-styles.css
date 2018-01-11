@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah");
+@import url("https://fonts.googleapis.com/css?family=Poiret+One");
+body {
+  padding: 50px;
+  text-align: center;
+  font-family: "Poiret One", cursive; }
+
+h2 {
+  font-family: "Pacifico";
+  /* weight: 800 */
+  font-size: 50px;
+  color: #540032;
+  margin-bottom: 100px; }
+
+p {
+  font-family: "Gloria Hallelujah", cursive; }
+
+hr {
+  height: 0;
+  background: none;
+  border: 0;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+  width: 40%; }
+
+a {
+  display: inline-block;
+  margin: 50px 0;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  padding: 1em 2em;
+  letter-spacing: 0.1em;
+  border-radius: 3px;
+  background: #540032; }
+
+.general {
+  background: #85144B; }
+
+.one:hover {
+  box-shadow: 0px 0px 0px 2px white, 0px 0px 0px 4px #540032; }
+
+.two {
+  background: #3DAAED; }
+  .two:hover {
+    box-shadow: 0px 0px 0px 1px #3DAAED inset, 0px 0px 0px 2px white inset; }
+
+.three {
+  background: #0B877D;
+  position: relative;
+  top: 0px;
+  left: 0px; }
+  .three:hover {
+    box-shadow: 2px 2px 0px white, 4px 4px 0px #0B877D;
+    top: -4px;
+    left: -4px; }
+
+.four {
+  background: #18C29C;
+  border-radius: 0;
+  box-shadow: 5px 5px 0px #83f0d7;
+  position: relative;
+  top: 0px;
+  right: 0;
+  bottom: 0;
+  left: 0px; }
+  .four:hover {
+    background: #16b491; }
+  .four:active {
+    top: 5px;
+    left: 5px;
+    box-shadow: 0px 0px 0px #83f0d7; }
+
+.five {
+  background: #F012BE;
+  position: relative;
+  border-radius: 0; }
+  .five:after, .five:before {
+    content: "";
+    display: block;
+    height: 2px;
+    background: white;
+    position: absolute;
+    top: 0;
+    right: 1%;
+    bottom: 1%;
+    left: 1%;
+    -webkit-transition: all 0.15s ease-out 0s;
+    -moz-transition: all 0.15s ease-out 0s;
+    transition: all 0.15s ease-out 0s; }
+  .five:before {
+    bottom: auto;
+    top: 1%; }
+  .five:hover:after, .five:hover:before {
+    left: 50%;
+    right: 50%; }
+
+.six {
+  background: #36175E;
+  box-shadow: 1px 1px 0px #4e2187, 2px 2px 0px #4e2187, 3px 3px 0px #4e2187, 4px 4px 0px #652bb0, 5px 5px 0px #7e3ed0, 6px 6px 0px #9967da, 7px 7px 0px #b590e4; }

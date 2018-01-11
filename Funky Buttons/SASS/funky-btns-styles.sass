@@ -1,0 +1,59 @@
+// Colour Variables
+// Colours from: https://color.adobe.com/explore/?filter=most-popular&time=month
+// Naming colours: http://chir.ag/projects/name-that-color/#6195ED
+$Tamarind: #2E112D
+$Blackberry: #540032
+$Siren: #820333
+$BrickRed: #C9283E
+$Flamingo: #F0433A
+$SurfieGreen: #0B877D
+$MountainMeadow: #18C29C
+$PictonBlue: #3DAAED
+$ScarletGum: #36175E
+
+$Facebook-Dark: #4d73bf
+$Facebook-Dark-Bg: #4267b2
+$Facebook-Dark-hover-Bg: #2b54a7
+$Facebook-Dark-active-Bg: #1d4698
+$Facebook-Light-Bg: #f6f7f9
+$Facebook-Light-hover-Bg: #e9ebee
+$Facebook-Light-active-Bg: #d8dade
+
+// Facebook Button Dark and Light
+.fb-btn
+    border-radius: 2px
+    font-size: 0.9rem
+    padding: 6px 12px
+    margin-bottom: 60px 
+
+    &--dark
+        -moz-box-shadow: inset 0 1px 0 0 $Facebook-Dark
+        -webkit-box-shadow: inset 0 1px 0 0 $Facebook-Dark
+        box-shadow: inset 0 1px 0 0 $Facebook-Dark
+        background: $Facebook-Dark-Bg
+        border: $Facebook-Dark-Bg
+        color: white
+        text-shadow: 0 1px 0 #3359a5
+
+        &:hover
+            background-color: $Facebook-Dark-hover-Bg
+
+        &:active
+            background-color: $Facebook-Dark-active-Bg
+            border-color: $Facebook-Dark-active-Bg
+
+    &--light
+        background: $Facebook-Light-Bg
+        border: 1px solid #ced0d4
+        border-radius: 2px
+        color: #4b4f56
+        cursor: pointer
+        font-size: 0.9rem
+        padding: 6px 12px
+
+        &:hover
+            background: $Facebook-Light-hover-Bg
+
+        &:active
+            background: $Facebook-Light-active-Bg
+            border-color: $Facebook-Light-active-Bg
