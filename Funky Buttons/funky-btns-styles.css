@@ -1,8 +1,10 @@
+@charset "UTF-8";
+/* Facebook Button Dark and Light */
 .fb-btn {
   border-radius: 2px;
   font-size: 0.9rem;
   padding: 6px 12px;
-  margin-bottom:60px; }
+  margin-bottom: 60px; }
   .fb-btn--dark {
     -moz-box-shadow: inset 0 1px 0 0 #4d73bf;
     -webkit-box-shadow: inset 0 1px 0 0 #4d73bf;
@@ -29,3 +31,157 @@
     .fb-btn--light:active {
       background: #d8dade;
       border-color: #d8dade; }
+
+/* 3D Lookin' Buttons Rectangle and Circle */
+/* Rectangle Button */
+.btn-3d-rectangle {
+  position: relative;
+  background: #F0433A;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  margin-right: 10px;
+  margin-bottom: 60px;
+  font-size: 1.2rem;
+  box-shadow: -6px 6px 0 #820333;
+  outline: none; }
+  .btn-3d-rectangle:hover {
+    background: #e61c11; }
+  .btn-3d-rectangle:active {
+    background: #e61c11;
+    top: 3px;
+    left: -3px;
+    box-shadow: -3px 3px 0 #820333; }
+  .btn-3d-rectangle::before {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 0;
+    width: 0;
+    /* Creates little triangles to join the box and box shadow together for the top. */
+    border: solid 6px transparent;
+    border-right: solid 6px #820333;
+    border-left-width: 0;
+    top: 0;
+    left: -6px; }
+  .btn-3d-rectangle:active::before {
+    border: solid 3px transparent;
+    border-right: solid 3px #820333;
+    border-left-width: 0;
+    left: -3px; }
+  .btn-3d-rectangle::after {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 0;
+    width: 0;
+    /* Creates little triangles to join the box and box shadow together for the bottom. */
+    border: solid 6px transparent;
+    border-top: solid 6px #820333;
+    border-bottom-width: 0;
+    bottom: -6px;
+    right: 0; }
+  .btn-3d-rectangle:active::after {
+    border: solid 3px transparent;
+    border-top: solid 3px #820333;
+    border-bottom-width: 0;
+    bottom: -3px; }
+
+/* Circle Button */
+.btn-3d-circle {
+  position: relative;
+  margin-bottom: 60px;
+  background: #18C29C;
+  background: -webkit-radial-gradient(#18C29C, #0B877D);
+  background: -o-radial-gradient(#18C29C, #0B877D);
+  background: -moz-radial-gradient(#18C29C, #0B877D);
+  background: radial-gradient(#18C29C, #0B877D);
+  font-size: 1rem;
+  text-shadow: 0 -1px 0 #c3af07;
+  color: white;
+  border: solid 1px #096f67;
+  border-radius: 100%;
+  width: 70px;
+  height: 70px;
+  z-index: 4;
+  outline: none;
+  box-shadow: inset 0 1px 0 #0B877D, 0 2px 0 #075851, 0 3px 0 #064a44, 0 4px 0 #053c37, 0 5px 0 #042d2a, 0 7px 0 #031f1d, 0 8px 0 #011110, 0 9px 0 #000303; }
+  .btn-3d-circle:hover {
+    background: #1ad0a7;
+    background: -webkit-radial-gradient(#1ad0a7, #0c958a);
+    background: -o-radial-gradient(#1ad0a7, #0c958a);
+    background: -moz-radial-gradient(#1ad0a7, #0c958a);
+    background: radial-gradient(#1ad0a7, #0c958a); }
+  .btn-3d-circle:active {
+    background: #1ad0a7;
+    background: -webkit-radial-gradient(#1ad0a7, #0c958a);
+    background: -o-radial-gradient(#1ad0a7, #0c958a);
+    background: -moz-radial-gradient(#1ad0a7, #0c958a);
+    background: radial-gradient(#1ad0a7, #0c958a);
+    top: 2px;
+    box-shadow: inset 0 1px 0 #0B877D, 0 2px 0 #075851, 0 3px 0 #064a44, 0 4px 0 #053c37, 0 5px 0 #042d2a, 0 7px 0 #031f1d; }
+
+/* Grandient Border Button */
+.gradient-btn {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 60px;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  background-color: #e7eef1;
+  border: solid 5px transparent;
+  border-image: linear-gradient(to top right, #36175E, #3DAAED);
+  border-image-slice: 1;
+  color: #36175E;
+  transition: all 0.3s ease-in-out; }
+  .gradient-btn:hover {
+    background-image: linear-gradient(to top right, #36175E, #3DAAED);
+    color: white; }
+
+/* Animated Button */
+/* Animated Background */
+.bg-animated-btn {
+  position: relative;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 60px;
+  font-size: 1.2rem;
+  background-color: #00b3b4;
+  background-image: url(pattern.png);
+  background-size: 40px 40px;
+  border: solid 1px #555;
+  color: white;
+  transition: all ease 0.3s; }
+  .bg-animated-btn:hover {
+    animation: background-loop-animation 2s linear infinite; }
+@keyframes ackground-loop-animation {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 40px 0; } }
+/* Padding Animated Background */
+.padding-animated-btn {
+  position: relative;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 60px;
+  font-size: 1.2rem;
+  background-color: #00b3b4;
+  background-size: 40px 40px;
+  border: solid 1px #555;
+  color: white;
+  transition: all ease 0.3s; }
+  .padding-animated-btn::after {
+    position: absolute;
+    top: 19%;
+    right: 0.1em;
+    content: "»";
+    transition: all ease 0.3s;
+    opacity: 0; }
+  .padding-animated-btn:hover {
+    padding: 6px 22px 6px 6px; }
+  .padding-animated-btn:hover::after {
+    right: 0.2em;
+    opacity: 1; }
