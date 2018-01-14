@@ -51,6 +51,7 @@ $Facebook-Light-active-Bg: #d8dade
 /* 3D Lookin' Buttons Rectangle and Circle */
 /* Rectangle Button */
 .btn-3d-rectangle
+    font-family: 'Poiret One', cursive
     position: relative
     background: $Flamingo
     border: none
@@ -111,6 +112,7 @@ $Facebook-Light-active-Bg: #d8dade
 
 /* Circle Button */
 .btn-3d-circle
+    font-family: 'Poiret One', cursive
     position: relative
     margin-bottom: 60px
     +colGradient($MountainMeadow, $SurfieGreen)
@@ -135,6 +137,7 @@ $Facebook-Light-active-Bg: #d8dade
 
 /* Grandient Border Button */
 .gradient-btn
+    font-family: 'Poiret One', cursive
     position: relative
     z-index: 1
     display: inline-block
@@ -156,6 +159,7 @@ $Facebook-Light-active-Bg: #d8dade
 /* Animated Button */
 /* Animated Background */
 .bg-animated-btn
+    font-family: 'Poiret One', cursive
     position: relative
     display: inline-block
     padding: 6px 12px
@@ -166,12 +170,12 @@ $Facebook-Light-active-Bg: #d8dade
     background-size: 40px 40px
     border: solid 1px #555
     color: white
-    transition: all ease 0.3s
+    transition: all 0.3s ease
 
     &:hover
         animation: background-loop-animation 2s linear infinite
 
-    @keyframes ackground-loop-animation
+    @keyframes background-loop-animation
         from
             background-position: 0 0
         to
@@ -179,6 +183,7 @@ $Facebook-Light-active-Bg: #d8dade
 
 /* Padding Animated Background */
 .padding-animated-btn
+    font-family: 'Poiret One', cursive
     position: relative
     display: inline-block
     padding: 6px 12px
@@ -188,7 +193,7 @@ $Facebook-Light-active-Bg: #d8dade
     background-size: 40px 40px
     border: solid 1px #555
     color: white
-    transition: all ease 0.3s
+    transition: all 0.3s ease
 
     &::after
         position: absolute
@@ -204,3 +209,93 @@ $Facebook-Light-active-Bg: #d8dade
     &:hover::after
         right: 0.2em
         opacity: 1
+
+/* Toggle UI Switch Buttons */
+/* Toggle Switch */
+.toggle-switch
+    font-family: 'Poiret One', cursive
+    display: inline-block
+    vertical-align: top
+    margin: 0 15px 0 0
+    margin-bottom: 60px
+
+    &__input
+        display: none
+    
+    &__btn
+        position: relative
+        display: inline-block
+        font-size: 1rem
+        line-height: 20px
+        text-transform: uppercase
+        background-color: $BrickRed
+        border: solid 1px $BrickRed
+        color: white
+        width: 80px
+        height: 30px
+        transition: all 0.3s ease
+        cursor: pointer
+
+    &__btn::before
+        position: absolute
+        top: 2.5px
+        left: 43px
+        content: "Off"
+        display: inline-block
+        height: 25px
+        padding: 0 3px
+        background: white
+        color: $BrickRed
+        transition: all 0.3s ease
+
+    &__input:checked + &__btn
+        background: #247065
+        border: solid 1px #247065
+    
+    &__input:checked + &__btn::before
+        left: 5px
+        content: "On"
+        color: #247065
+
+/* Toggle Switch 2 */
+.toggle-switch-alt
+    font-family: 'Poiret One', cursive
+    display: inline-block
+    vertical-align: top
+    margin: 0 15px 0 0
+    margin-bottom: 60px
+
+    &__input
+        display: none
+    
+    &__btn
+        position: relative
+        display: inline-block
+        line-height: 20px
+        text-transform: uppercase
+        background: white
+        color: #aaa
+        border: solid 1px #ccc
+        padding: 5px 10px 5px 30px  //30px padding to allow us to create box/cicle on the left of text.
+        transition: all 0.3s ease
+        cursor: pointer
+    
+    &__btn::before
+        position: absolute
+        top: 10px
+        left: 10px
+        display: inline-block
+        width: 10px
+        height: 10px
+        background: #ccc
+        content: ""
+        transition: all 0.3s ease
+        border-radius: 100% //to make the square into a circle grey icon.
+
+    &__input:checked + &__btn
+        background: #00b3b4
+        border-color: #00b3b4
+        color: white
+
+    &__input:checked + &__btn::before
+        background-color: white

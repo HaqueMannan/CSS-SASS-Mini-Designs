@@ -1,4 +1,7 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah");
+@import url("https://fonts.googleapis.com/css?family=Poiret+One");
 /* Facebook Button Dark and Light */
 .fb-btn {
   border-radius: 2px;
@@ -35,6 +38,7 @@
 /* 3D Lookin' Buttons Rectangle and Circle */
 /* Rectangle Button */
 .btn-3d-rectangle {
+  font-family: "Poiret One", cursive;
   position: relative;
   background: #F0433A;
   border: none;
@@ -89,6 +93,7 @@
 
 /* Circle Button */
 .btn-3d-circle {
+  font-family: "Poiret One", cursive;
   position: relative;
   margin-bottom: 60px;
   background: #18C29C;
@@ -123,6 +128,7 @@
 
 /* Grandient Border Button */
 .gradient-btn {
+  font-family: "Poiret One", cursive;
   position: relative;
   z-index: 1;
   display: inline-block;
@@ -143,6 +149,7 @@
 /* Animated Button */
 /* Animated Background */
 .bg-animated-btn {
+  font-family: "Poiret One", cursive;
   position: relative;
   display: inline-block;
   padding: 6px 12px;
@@ -153,16 +160,17 @@
   background-size: 40px 40px;
   border: solid 1px #555;
   color: white;
-  transition: all ease 0.3s; }
+  transition: all 0.3s ease; }
   .bg-animated-btn:hover {
     animation: background-loop-animation 2s linear infinite; }
-@keyframes ackground-loop-animation {
+@keyframes background-loop-animation {
   from {
     background-position: 0 0; }
   to {
     background-position: 40px 0; } }
 /* Padding Animated Background */
 .padding-animated-btn {
+  font-family: "Poiret One", cursive;
   position: relative;
   display: inline-block;
   padding: 6px 12px;
@@ -172,7 +180,7 @@
   background-size: 40px 40px;
   border: solid 1px #555;
   color: white;
-  transition: all ease 0.3s; }
+  transition: all 0.3s ease; }
   .padding-animated-btn::after {
     position: absolute;
     top: 19%;
@@ -185,3 +193,83 @@
   .padding-animated-btn:hover::after {
     right: 0.2em;
     opacity: 1; }
+
+/* Toggle UI Switch Buttons */
+/* Toggle Switch */
+.toggle-switch {
+  font-family: "Poiret One", cursive;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 15px 0 0;
+  margin-bottom: 60px; }
+  .toggle-switch__input {
+    display: none; }
+  .toggle-switch__btn {
+    position: relative;
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 20px;
+    text-transform: uppercase;
+    background-color: #C9283E;
+    border: solid 1px #C9283E;
+    color: white;
+    width: 80px;
+    height: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer; }
+  .toggle-switch__btn::before {
+    position: absolute;
+    top: 2.5px;
+    left: 43px;
+    content: "Off";
+    display: inline-block;
+    height: 25px;
+    padding: 0 3px;
+    background: white;
+    color: #C9283E;
+    transition: all 0.3s ease; }
+  .toggle-switch__input:checked + .toggle-switch__btn {
+    background: #247065;
+    border: solid 1px #247065; }
+  .toggle-switch__input:checked + .toggle-switch__btn::before {
+    left: 5px;
+    content: "On";
+    color: #247065; }
+
+/* Toggle Switch 2 */
+.toggle-switch-alt {
+  font-family: "Poiret One", cursive;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 15px 0 0;
+  margin-bottom: 60px; }
+  .toggle-switch-alt__input {
+    display: none; }
+  .toggle-switch-alt__btn {
+    position: relative;
+    display: inline-block;
+    line-height: 20px;
+    text-transform: uppercase;
+    background: white;
+    color: #aaa;
+    border: solid 1px #ccc;
+    padding: 5px 10px 5px 30px;
+    transition: all 0.3s ease;
+    cursor: pointer; }
+  .toggle-switch-alt__btn::before {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    content: "";
+    transition: all 0.3s ease;
+    border-radius: 100%; }
+  .toggle-switch-alt__input:checked + .toggle-switch-alt__btn {
+    background: #00b3b4;
+    border-color: #00b3b4;
+    color: white; }
+  .toggle-switch-alt__input:checked + .toggle-switch-alt__btn::before {
+    background-color: white; }
