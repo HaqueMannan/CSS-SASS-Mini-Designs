@@ -1,0 +1,68 @@
+/*Global Styles */
+
+/* Center all the elements within the webpage */
+body{
+    margin: 0 auto 20px;
+    width: 800px;
+}
+
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    font-size: 50px;
+}
+
+h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+h3{
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+    font-size: 35px;
+    margin: 25px 0;
+    text-align: center;
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+code{
+    background: orangered;
+    border: 5px solid orangered;
+    color: white;
+    text-shadow: 1px 1px 5px #6d6d6d;
+}
+
+/* Broken Image Handler */
+img.broken-img-handler{
+    position: relative;
+    display: inline-block;
+    font-family: Arial, sans serif;
+    font-size: 0.7em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;                    /* create a margin at the bottom for the sudo element so that the after element below do not stack ontop of each other. */
+}
+
+img.broken-img-handler:after{
+    display: inherit;                       /* inherit the original image whether block or inline */
+    position: absolute;                     /* allows element to sit ontop of the original broken image */
+    top: 0;                                 /* align position from top */
+    left: 0;                                /* align position from left */
+    width: 100%;                            /* width of content, padding and border area of the element */
+    min-width: 150px;                       /* minimum width of the box */
+    padding: 10px 20px 10px 45px;           /* padding style up=10px, right=20px, down=10px, left=45px*/
+    border: 1px dashed #888888;           /* border-line style - dashed */
+    background-color: #f0f0f0;            /* background colour - grey */
+    background-image: url(noimage.png);     /* broken image handler icon */
+    background-size: 10%;                   /* manipulate the size of image */
+    background-repeat: no-repeat;           /* prevent repeat of image */
+    background-position: 15px 5px;          /* position of the image x-axis=15px y-axis=3px */
+    z-index: 1;                             /* stacking level to make the image handler sit infront */
+    content: "" attr(alt) " Not Found";     /* we need the content element for the broken image handler to appear on the webpage. However we need to add text to make it appear correctly on the page. The attr(alt) will look at the HTML markup for the image alt attribute value i.e. img alt = "Apple" and put that as the content. We can add exter strings to the content, in this example we want to add " Not Found" at the end of the alt attribute value to now give the string of "Apple Not Found". The alt attribute will be dynamic within the string. */
+}
