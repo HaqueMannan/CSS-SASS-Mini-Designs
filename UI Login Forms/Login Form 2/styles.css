@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: url(bg-mirko-nicholson-371385.jpg);     /* background image courtesy of @mirkonicholson unsplash.com */
+    background-size: cover;
+    font-family: "Montserrat", Helvetica, sans-serif;
+}
+
+.avatar{
+    width: 100px;               /* Width of avatar image */
+    height: 100px;              /* Height of avatar image */
+    border-radius: 50%;         /* Create circle border around image */
+    position: absolute;
+    top: -50px;                 /* Move image upwards */
+    left: calc(50% - 50px)      /* Calculate image movement to sit in the center of the login box */
+}
+
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 40px;
+    background: #000000cc;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px #00000080;
+    border-radius: 10px;
+}
+
+.login-box h2{
+    margin: 40px 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.login-box .inputBox{
+    position: relative;
+}
+
+.login-box .inputBox input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #ffffffc5;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.login-box .inputBox label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s; 
+}
+
+.login-box .inputBox input:focus ~ label,
+.login-box .inputBox input:valid ~ label{
+    top: -20px;
+    left: 0;
+    color: #03a9f4;
+    font-size: 12px;
+}
+
+.login-box input[type="submit"]{
+    width: 320px;
+    height: 35px;
+    background: transparent;
+    border: none;
+    margin-bottom: 20px;
+    outline: none;
+    color: #fff;
+    background: #03a9f4;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.login-box input[type="submit"]:hover{
+    background: #ffc107f3;
+}
+
+.login-box a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+    padding: 0 10px;
+}
+
+.login-box a:hover{
+    color: #ffc107c9;
+}
