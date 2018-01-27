@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Login UI Form</title>
+        <link href="https://fonts.googleapis.com/css?family=Muli:300,600" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <!-- Note: This uses a little bit of jQuery Library (Javascript) for some interactivity. However, our focus should be on HTML & CSS - we will learn and develope our Javascript knowledge later. -->
+        <script src="jquery-3.3.1.min.js"></script>
+        <!-- This Javascript will toggle the div class foldLoginBox name between class="foldLoginBox" class="foldLoginBox active" which will trigger the different transform CSS properties. -->
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".signIn").click(function(){
+                    $(".foldLoginBox").toggleClass("active")
+                })
+            })
+        </script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="signIn">Click Here to Sign In</div>
+            <div class="foldLoginBox">
+                <form>
+                    <input type="text" name="" required="" placeholder="Username">
+                    <input type="password" name="" required="" placeholder="Password">
+                    <input type="submit" name="" value="Login">
+                    <a href="#">forgot your password?</a>
+                    <a href="#">Create a new account.</a>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
