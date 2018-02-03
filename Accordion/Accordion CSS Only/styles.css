@@ -1,0 +1,69 @@
+.accordion {
+    position: relative;
+    display: block;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+}
+
+.accordion .accordion__item {
+    display: block;
+}
+
+/* We are hiding the content and getting some base styles. */
+.accordion .accordion__content {
+    display: block;
+    padding: 0;
+    overflow: hidden;
+    height: 0;
+    -webkit-transition: height 0.5s ease, padding 0.3s linear;
+    transition: height 0.5s ease, padding 0.3s linear;
+}
+
+.accordion .accordion__content p {
+    padding: 20px;
+    margin:0;
+}
+
+/* Perform an action (i.e. adjust height of content) then the target selector is activated. */
+/* The transition above will then activate as this acts as the trigger for the transition. */
+.accordion .accordion__content:target {
+    height: 150px;
+}
+
+.accordion .accordion__trigger {
+    text-decoration: none;
+}
+
+/* Style the Accordion headers/title bars. */
+.accordion .accordion__title {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 10px;
+    font-size: 1em;
+    background-color: #00B3B4;
+    color: #FFFFFF;
+    border: 1px solid #379AA4;
+    -webkit-box-shadow: 0 1px 0 #ffffff80 inset, 0 -1px 0 #ffffff1a inset, 0 4px 0 #338a94, 0 4px 2px #00000080;
+    -moz-box-shadow: 0 1px 0 #ffffff80 inset, 0 -1px 0 #ffffff1a inset, 0 4px 0 #338a94, 0 4px 2px #00000080;
+    box-shadow: 0 1px 0 #ffffff80 inset, 0 -1px 0 #ffffff1a inset, 0 4px 0 #338A94, 0 4px 2px #00000080;
+    cursor: pointer;
+}
+
+.accordion .title:hover {
+    background-color: #0bbfc0;
+}
+
+/* Create the downwards arround using borders of a square and rotating it. */
+.accordion .accordion__title:after {
+    position: absolute;
+    content: "";
+    right: 20px;
+    width: 7px;
+    height: 7px;
+    border-left: 2px solid #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
+    top: calc(50% - 5px);                       /* centre the downward arrow */
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}

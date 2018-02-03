@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Accordion Example</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <!-- Example of creating an Accordion with only HTML & CSS. Usually you would use Javascript for interactvity. The downside of only using HTML & CSS is that in this example we cannot close all (when we open a dropdown) and we cannot open all at the same time. -->
+        
+        <h4>CSS3 Accordion Example:</h4>
+        
+        <div class="accordion">
+            <!-- First accordion item -->
+            <div class="accordion__item">
+                <a href="#tab1" class="accordion__trigger accordion__title">Accordion 1</a>
+                <div id="tab1" class="accordion__content"><p>Nam soluta error possimus dicta optio ipsa, veritatis debitis ex porro sunt expedita nobis, eius provident ipsum sit nihil, quas beatae reprehenderit minima asperiores esse quisquam consequatur! Totam neque commodi beatae doloremque nam atque, id alias tenetur aperiam, ex doloribus molestiae? Distinctio?</p></div>
+            </div>
+            <!-- Second accordion item -->
+            <div class="accordion__item">
+                <a href="#tab2" class="accordion__trigger accordion__title">Accordion 2</a>
+                <div id="tab2" class="accordion__content"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor laborum, rerum quasi rem placeat quo ratione qui, optio id eaque laudantium reprehenderit aliquam vel cum necessitatibus ut doloremque ullam natus.</p></div>
+            </div>
+            <!-- Third accordion item -->
+            <div class="accordion__item">
+                <a href="#tab3" class="accordion__trigger accordion__title">Accordion 3</a>
+                <div id="tab3" class="accordion__content"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor laborum, rerum quasi rem placeat quo ratione qui, optio id eaque laudantium reprehenderit aliquam vel cum necessitatibus ut doloremque ullam natus.</p></div>
+            </div>
+        </div>
+    </body>
+</html>
