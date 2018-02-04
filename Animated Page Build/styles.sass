@@ -1,0 +1,125 @@
+/* Frame Style */
+body
+    background: #e3e3e3
+    padding: 20px
+    font-family: 'Roboto Slab', serif
+
+.header
+    background: #00BCD4
+    text-align: center
+    overlfow: hidden
+
+.text
+    padding: 30px 10px
+    font-size: 30px
+    color: #fff
+    text-transform: uppercase
+    letter-spacing: 3px
+
+.website
+    margin: 50px auto
+    background: #fff
+    max-width: 700px
+    box-shadow: 0px 25px 30px -20px rgba(0,0,0,0.2)
+    box-sizing: border-box
+/* Frame Style */
+
+/* Grid Style */
+.grid
+    padding: 10px
+    perspective: 1000px
+    .item
+        background: #ccc
+        height: 60px
+        margin-bottom: 10px
+        display: inline-block
+        width: 100%
+        border-radius: 4px
+        padding: 20px
+        box-sizing: border-box
+        color: white
+        width: 160px
+        background:
+            position: center
+            size: cover
+
+        /* nth child for all 19 images - these can be any images or http links to images */
+        &:nth-child(1)
+            background-image: url(Images/image1.jpg)
+        &:nth-child(2)
+            background-image: url(Images/image2.png)
+        &:nth-child(3)
+            background-image: url(Images/image3.png)
+        &:nth-child(4)
+            background-image: url(Images/image4.png)
+        &:nth-child(5)
+            background-image: url(Images/image5.png)
+        &:nth-child(6)
+            background-image: url(Images/image6.png)
+        &:nth-child(7)
+            background-image: url(Images/image7.jpg)
+        &:nth-child(8)
+            background-image: url(Images/image8.jpg)
+        &:nth-child(9)
+            background-image: url(Images/image9.png)
+        &:nth-child(10)
+            background-image: url(Images/image10.png)
+        &:nth-child(11)
+            background-image: url(Images/image11.png)
+        &:nth-child(12)
+            background-image: url(Images/image12.png)
+        &:nth-child(13)
+            background-image: url(Images/image13.png)
+        &:nth-child(14)
+            background-image: url(Images/image4.png)
+        &:nth-child(15)
+            background-image: url(Images/image5.png)
+        &:nth-child(16)
+            background-image: url(Images/image16.jpg)
+        &:nth-child(17)
+            background-image: url(Images/image17.png)
+        &:nth-child(18)
+            background-image: url(Images/image18.png)
+        &:nth-child(19)
+            background-image: url(Images/image19.png)
+
+        /* Create different sizes for the above images using maths for the nth child */
+        &:nth-child(4n-5)
+            height: 50px
+
+        &:nth-child(2n)
+            height: 300px
+
+        &:nth-child(3n)
+            height: 120px
+/* Grid Style */
+
+
+// ANIMATION STARTS HERE
+.item
+    opacity: 0
+
+/* This is the trigger for the Items Animation & Keyframe. Therefore, when javascript adds .is-visible to the .item div classes (div class holding the images) this will trigger the animation below using the transition properties defined here. */
+.item.is-visible
+    animation: imageLoad 600ms ease-in forwards
+
+/* Items Animation & Keyframe defined */
+@keyframes imageLoad
+    0%
+        opacity: 0
+        transform: scale(0.3) rotateY(90deg)
+    60%
+        transform: scale(1.4)
+    90%
+        transform: scale(0.9)
+    100%
+        opacity: 1
+
+/* Alternative Animation - just change .item.is-visible animation: property from imageLoad to imageLoad2 */
+@keyframes imageLoad2
+    0%
+        opacity: 0
+        height: 0%
+        padding: 0px
+    100%
+        opacity: 1
