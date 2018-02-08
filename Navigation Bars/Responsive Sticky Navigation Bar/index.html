@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Responsive Sticky Navigation Bar</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header>
+                <nav>
+                    <!-- Burger Menu Icon -->
+                    <div class="menu-icon">
+                        <i class="fa fa-bars fa-2x"></i>
+                    </div>
+                    <!-- Website Logo -->
+                    <div class="logo">LOGO</div>
+                    <!-- Navigation Bar -->
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a class="active" href="#">Login</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+        </div>
+        <!-- Webpage Content -->
+        <div class="content">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, accusamus tempore eum non debitis, ut mollitia veniam voluptates labore eius sapiente incidunt soluta excepturi dicta, assumenda adipisci distinctio eveniet. Accusamus!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta vitae odit labore rerum ipsam aliquam fuga ad ex repellat id maiores veniam inventore ab beatae incidunt qui, exercitationem nemo dolorem tempore nisi aspernatur ipsum iure velit. Fuga ullam, nostrum atque quibusdam sequi iusto soluta. Itaque ipsam unde in doloribus explicabo.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et sit provident quidem nihil itaque soluta eum neque, doloremque minima.</p>
+        </div>
+
+        <script type="text/javascript">
+            //Menu Toggle Button
+            $(document).ready(function() {
+                $(".menu-icon").on("click", function() {
+                    $("nav ul").toggleClass("showing");
+                });
+            });
+
+            // Scrolling Effect
+            $(window).on("scroll", function() {
+                if($(window).scrollTop()) {
+                    $("nav").addClass("black");
+                }
+                else {
+                    $("nav").removeClass("black");
+                }
+            })
+        </script>
+    </body>
+</html>
