@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+div.secText {
+    padding: 50px 50px;
+    height: auto;
+}
+
+div.secText h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 48px;
+    color: #262626;
+}
+
+div.secText p {
+    font-size: 18px;
+}
+
+
+section.sec1 {
+    background: url("Images/adrian-infernus-394882.jpg");
+    background-size: cover;
+    /* background-position: center center; */
+    background-attachment: fixed;
+}
+section.sec2 {
+    background: url("Images/chris-coe-425129.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+section.sec3 {
+    background: url("Images/vitaliy-paykov-388848.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+section.sec4 {
+    background: url("Images/dan-grinwis-371619.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
